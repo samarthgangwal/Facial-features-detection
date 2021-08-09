@@ -4,9 +4,9 @@ import sys
 menu = int(input("Enter 1 for face detection using an image \nEnter 2 for face detection using webcam\nEnter Number:"))
     
 #Get user supplied values
-FcascPath = 'C:/Users/samar/Desktop/haarcascade_frontalface_default.xml'
-EcascPath = 'C:/Users/samar/Desktop/haarcascade_eye.xml'
-ScascPath = 'C:/Users/samar/Desktop/haarcascade_smile.xml'
+FcascPath = 'haarcascade face path'
+EcascPath = 'haarcascade eyes path'
+ScascPath = 'haarcascade smile path'
 
 #Create the haar cascade
 faceCascade = cv2.CascadeClassifier(FcascPath)
@@ -17,7 +17,7 @@ if menu == 1:
 
     k = input("Enter file name (With Extension):")
     #user values
-    imagePath = 'C:/Users/samar/Pictures/' + k
+    imagePath = 'folder path having of file having pictures' + k
     #Read the image
     image = cv2.imread(imagePath)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
